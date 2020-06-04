@@ -38,7 +38,7 @@ tg = TelegrafClient(host=args.host, port=args.port)
 
 # greylog_from = 'https://graylog.noc.dcapi.net:8443/api/search/universal/relative/terms?query=header_x-dc-from-domain%3A%2A&range=1209600&field=header_x-dc-from-domain&order=header_x-dc-from-domain%3Adesc&size=999999'
 greylog_url = 'https://graylog.noc.dcapi.net:8443/api/search/universal/relative/terms?query=header_x-dc-url-domain%3A%2A&range=1209600&field=header_x-dc-url-domain&order=header_x-dc-url-domain%3Adesc&size=999999'
-r_url = requests.get(greylog_url, auth=('b6ea1p6hftl8fg9rhu54agk0ukhje0qgt261odv82ssciqaoqci', 'token'))
+r_url = requests.get(greylog_url, auth=('XXX', 'token'))
 urls_dirty = r_url.json()['terms']
 
 logger.debug("Graylog response actual url links:")
